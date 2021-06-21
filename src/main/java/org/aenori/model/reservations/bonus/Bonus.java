@@ -2,7 +2,7 @@ package org.aenori.model.reservations.bonus;
 
 import org.aenori.model.reservations.Reservation;
 
-public abstract class Bonus {
+public class Bonus {
 	private Reservation reservation;
 	private int price;
 	private String details;

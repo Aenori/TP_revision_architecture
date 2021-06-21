@@ -8,9 +8,11 @@ import org.aenori.model.reservations.bonus.Bonus;
 import jakarta.servlet.http.HttpServletRequest;
 
 public interface IReservationFactory {
+	// La reservation peut être de tout type
     public Reservation createReservationFromRequest(
     		HttpServletRequest request
     ) throws Exception;
+    
     public Bonus createBonusFromRequest(
     		HttpServletRequest request, 
     		Reservation reservation

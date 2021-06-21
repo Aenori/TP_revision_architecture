@@ -23,16 +23,18 @@ public class PlaneForbidCompanyDecorator implements IReservationFactory {
 	
 	@Override
 	public Reservation createReservationFromRequest(HttpServletRequest request) throws Exception {
+		return decorated.createReservationFromRequest(request);
+	}
+
+	private void checkIfCompanyIsForbidden(HttpServletRequest request) throws Exception {
 		if(request.getParameter("company").equals(forbiddenCompany)) {
 			throw new Exception("Company " + forbiddenCompany + " is currently " +
 					"forbidden, please contact the manager");
 		}
-		return decorated.createReservationFromRequest(request);
 	}
 
 	@Override
 	public Bonus createBonusFromRequest(HttpServletRequest request, Reservation reservation) throws Exception {
-		// TODO Auto-generated method stub
 		return decorated.createBonusFromRequest(request, reservation);
 	}
 }
