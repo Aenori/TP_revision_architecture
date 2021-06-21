@@ -15,7 +15,9 @@ public class PlaneReservation extends TransportReservation {
     public PlaneReservation() {}
 
     @Override
-    public void accept(IVisitorReservation vr) { vr.visit(this); }
+    public void accept(IVisitorReservation vr) { 
+    	vr.visitPlaneReservation(this);
+    }
 
 	public String getFlightNumber() {
 		return flightNumber;

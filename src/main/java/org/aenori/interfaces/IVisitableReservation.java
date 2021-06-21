@@ -11,5 +11,5 @@ package org.aenori.interfaces;
  * as it doesn't need everything there is in a reservation  
  */
 public interface IVisitableReservation {
-    
+	public void accept(IVisitorReservation vr);
 }

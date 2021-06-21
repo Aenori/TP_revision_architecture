@@ -9,13 +9,13 @@ import java.util.Set;
 import org.aenori.interfaces.IVisitorReservation;
 import org.aenori.model.Person;
 
-public class TrainReservation extends TransportReservation {
+public class BlablaCarReservation extends TransportReservation {
     private Date date;
     private String villeDeDepart;
     private String villeDArrivee;
 
-    public TrainReservation() {}
+    public BlablaCarReservation() {}
 
     @Override
-    public void accept(IVisitorReservation vr) { vr.visitTrainReservation(this); }
+    public void accept(IVisitorReservation vr) { vr.visitBlablaCarReservation(this); }
 }
