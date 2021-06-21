@@ -25,16 +25,4 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Maven install
       run: mvn install
-    - name: Tomcat install
-      run: bash .github/scripts/install_tomcat.sh
-    - name: Install war
-      run: bash .github/scripts/install_war.sh
-    - name: Test netstat
-      run: netstat -a
-    - name: Run Tomcat
-      run: bash .github/scripts/run_tomcat.sh      
-    - name: Run all tests 
-      run: bash test_as_shell/test_all.sh
-    - name: Shutdown
-      run: bash /opt/tomcat/bin/shutdown.sh
 
