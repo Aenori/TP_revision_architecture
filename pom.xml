@@ -63,6 +63,6 @@
 				<version>3.3.1</version>
 			</plugin>
 		</plugins>
-		<finalName>TP_real_project</finalName>
+		<finalName>TP_revision_architecture</finalName>
 	</build>
 </project>
