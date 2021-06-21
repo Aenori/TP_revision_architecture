@@ -48,7 +48,5 @@ public class PlaneForbidCompanyDecoratorTest extends TestCase {
 			// On vérifie que le décorateur 
 			assertEquals(exception.getMessage(), "Company AF is currently forbidden, please contact the manager");
 		}
-		
-		// IReservationFactory decorator2 = new PlaneForbidCompanyDecorator(decorator, "LH");
 	}
 }

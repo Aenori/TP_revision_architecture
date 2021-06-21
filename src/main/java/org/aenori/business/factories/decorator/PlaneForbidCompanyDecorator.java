@@ -23,6 +23,7 @@ public class PlaneForbidCompanyDecorator implements IReservationFactory {
 	
 	@Override
 	public Reservation createReservationFromRequest(HttpServletRequest request) throws Exception {
+		checkIfCompanyIsForbidden(request);
 		return decorated.createReservationFromRequest(request);
 	}
 
