@@ -7,7 +7,7 @@ import org.aenori.model.reservations.bonus.Bonus;
 
 import jakarta.servlet.http.HttpServletRequest;
 
-public interface IReservationAbstractFactory {
+public interface IReservationFactory {
     public Reservation createReservationFromRequest(
     		HttpServletRequest request
     ) throws Exception;

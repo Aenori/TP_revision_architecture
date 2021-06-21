@@ -2,7 +2,7 @@ package org.aenori.business.factories.decorator;
 
 import java.net.http.HttpRequest;
 
-import org.aenori.interfaces.IReservationAbstractFactory;
+import org.aenori.interfaces.IReservationFactory;
 import org.aenori.model.reservations.PlaneReservation;
 import org.aenori.model.reservations.Reservation;
 import org.aenori.model.reservations.bonus.Bonus;
@@ -12,11 +12,11 @@ import jakarta.servlet.http.HttpServletRequest;
 // Cette classe implemente le design pattern decorator.
 // Elle prend en entree un autre objet de type IReservationAbstractFactory
 // et rajoute une fonctionnalité
-public class PlaneForbidCompanyDecorator implements IReservationAbstractFactory {
-	private IReservationAbstractFactory decorated;
+public class PlaneForbidCompanyDecorator implements IReservationFactory {
+	private IReservationFactory decorated;
 	private String forbiddenCompany;
 	
-	public PlaneForbidCompanyDecorator(IReservationAbstractFactory decorated, String forbiddenCompany) {
+	public PlaneForbidCompanyDecorator(IReservationFactory decorated, String forbiddenCompany) {
 		this.decorated = decorated;
 		this.forbiddenCompany = forbiddenCompany;
 	}
